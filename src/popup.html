@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小説家になろうNFT拡張機能</title>
+  <script src="web3.min.js"></script>
+  <script src="popup.js"></script>
+  <!-- Firebaseライブラリの追加 -->
+  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"></script>
+  <!-- Firebaseの設定 -->
+  <script>
+    // 以下の設定はFirebaseコンソールから取得したものに置き換えてください
+    const firebaseConfig = {
+        apiKey: "AIzaSyAZpRn1oWK28HgsYxErmI3MnD_Qhtnc1Jk",
+        authDomain: "narounft.firebaseapp.com",
+        projectId: "narounft",
+        storageBucket: "narounft.appspot.com",
+        messagingSenderId: "85491090076",
+        appId: "1:85491090076:web:b0e43338c97db1cb62e359",
+        measurementId: "G-T11MS2Q2ZQ"
+    };
+  
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+  <div id="login">
+    <h2>ログイン</h2>
+    <input type="email" id="email" placeholder="メールアドレス">
+    <input type="password" id="password" placeholder="パスワード">
+    <button id="loginButton">ログイン</button>
+  </div>
+  <div id="nft">
+    <h2>NFT</h2>
+    <button id="getNFTButton">NFT取得</button>
+    <button id="checkNFTButton">NFT確認</button>
+    <div>
+      <label for="nftLevel">購入するNFTのレベル：</label>
+      <input type="number" id="nftLevel" min="1" max="3">
+    </div>
+    <button id="buyNFTButton">NFT購入</button>
+  </div>
+  <!-- 他の機能に関する要素を追加 -->
+</body>
+</html>

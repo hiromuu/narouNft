@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "小説家になろうNFT拡張機能",
+    "version": "1.0",
+    "description": "小説家になろうのユーザーにNFTとトークンを付与する拡張機能",
+    "icons": {
+      "48": "icon.png"
+    },
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "小説家になろうNFT拡張機能"
+    },
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "https://ncode.syosetu.com/*"
+        ],
+        "js": ["web3.min.js", "contentScript.js"]
+      }
+    ]
+  }
